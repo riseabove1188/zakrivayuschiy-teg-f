@@ -71,6 +71,7 @@
 
 .theme-menu__button:disabled {
   opacity: 60%;
+  pointer-events: none;
 }
 
 .theme-menu__button:disabled::before {
@@ -87,10 +88,6 @@
   to {
     transform: translate(4px, 0px);
   }
-}
-
-.theme-menu__button:disabled {
-  pointer-events: none;
 }
 
 .theme-menu__button:not(:disabled) {
@@ -286,7 +283,7 @@ filter: hue-rotate(45deg);
 
 .like-icon.is-liked .contour {
   fill: var(--filling-color);
-  fill: 0.3s 0.06s;
+  transition: fill 0.3s 0.06s;
 }
 
 .like-icon.is-liked .heart {
