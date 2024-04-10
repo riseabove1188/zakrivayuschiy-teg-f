@@ -9,9 +9,10 @@
     --basic-color: rgba(0, 0, 0, 1);
     --bold-weight: 700;
     --basic-weight: 400;
-    --bg-image1: #d3d3d3;
-    --bg-image2: #e7e7e7;
-    --bg-image3: #1a1a1a;
+    --constant-weight: 400;
+    --bg-image-one: #d3d3d3;
+    --bg-image-two: #e7e7e7;
+    --bg-image-three: #1a1a1a;
 }
 
 :root.theme-dark {
@@ -19,9 +20,10 @@
     --basic-color: rgba(0, 204, 20, 1);
     --bold-weight: 785;
     --basic-weight: 465;
-    --bg-image1: #000;
-    --bg-image2: #007f0c;
-    --bg-image3: #004306;
+    --constant-weight: 400;
+    --bg-image-one: #000;
+    --bg-image-two: #007f0c;
+    --bg-image-three: #004306;
     --circuit-color: rgba(0, 204, 20, 1);
 }
 
@@ -31,9 +33,10 @@
         --basic-color: rgba(0, 204, 20, 1);
         --bold-weight: 785;
         --basic-weight: 465;
-        --bg-image1: #000;
-        --bg-image2: #007f0c;
-        --bg-image3: #004306;
+        --constant-weight: 400;
+        --bg-image-one: #000;
+        --bg-image-two: #007f0c;
+        --bg-image-three: #004306;
         --circuit-color: rgba(0, 204, 20, 1);   
     }
   }

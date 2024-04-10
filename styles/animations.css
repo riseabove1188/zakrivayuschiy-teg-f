@@ -12,3 +12,114 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+.like-icon .main-body {
+    fill: var(--bg-color);
+    transition: fill  0.3s 0.05s;
+  }
+  
+  .like-icon .core {
+    fill: var(--bg-color);
+    transition: fill 0.3s;
+  }
+  
+  .like-icon:hover .core {
+    fill: var(--basic-color);
+    
+  }
+  
+  .like-icon:hover .main-body {
+    fill: var(--basic-color);
+  }
+  
+  .card__icon-button:active .like-icon .main-body,
+  .card__icon-button:active .like-icon .core {
+    fill: var(--filling-color);
+  }
+  
+  .card__icon-button:active .like-icon .main-body {
+    transition: fill 0.3s 0.05s;
+  }
+  
+  .card__icon-button:active .like-icon .core {
+    transition: fill 0.3s;
+  }
+  
+  .card__icon-button .like-icon .main-body {
+    transition: fill 0.3s;
+  }
+  
+  .card__icon-button .like-icon .core {
+    transition: fill 0.3s 0.03s;
+  }
+  
+  .like-icon.is-liked .core {
+    fill: var(--filling-color);
+    transition: fill 0.3s;
+  }
+  
+  .like-icon.is-liked .main-body {
+    fill: var(--filling-color);
+    transition: fill 0.3s 0.03s;
+  }
+  
+  .like-icon.is-liked .contour {
+    fill: var(--filling-color);
+    transition: fill 0.3s 0.06s;
+  }
+  
+  .like-icon.is-liked .heart {
+    animation: 0.3s 0.1s bigheart ease-in;
+    transform-origin: center;
+  }
+  
+  @keyframes bigheart {
+    0% {
+      scale: 1;
+    }
+  
+    100% {
+      scale: 1.5;
+    }
+  }
+  
+  .like-icon.is-liked .sparks {
+    animation: 0.3s 0.3s sparks ease-in;
+  }
+  
+  @keyframes sparks {
+    0% {
+      opacity: 0%;
+    }
+  
+    100% {
+      opacity: 100%;
+    }
+  
+    0% {
+      opacity: 0%;
+    }
+  }
+
+  .card__like-button:hover {
+    cursor: pointer;
+    color: var(--bg-color);
+    z-index: 1;
+  }
+  
+  .card__like-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 0%;
+    height: 100%;
+    background-color: var(--basic-color);
+    transition: width 0.5s;
+    z-index: -1;
+  }
+  
+  .card__like-button:hover::before {
+    width: 100%;
+  }
+  

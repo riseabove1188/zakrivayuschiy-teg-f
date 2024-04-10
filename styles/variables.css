@@ -2,13 +2,14 @@
 :root {
     --basic-font: 'Inter';
     --accent-font: 'Press Start 2P';
+    --constant-weight: 400;
     --basic-weight: 400;
     --bold-weight: 700;
     --bg-color: rgba(255, 255, 255, 1);
     --basic-color: rgba(0, 0, 0, 1);
-    --bg-image1: #d3d3d3;
-    --bg-image2: #e7e7e7;
-    --bg-image3: #1a1a1a;
+    --bg-image-one: #d3d3d3;
+    --bg-image-two: #e7e7e7;
+    --bg-image-three: #1a1a1a;
     --filling-color: rgb(255, 0, 0);
     --circuit-color: rgba(0, 0, 0, 1);
 }
