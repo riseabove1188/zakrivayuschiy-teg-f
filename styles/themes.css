@@ -24,3 +24,16 @@
     --bg-image3: #004306;
     --circuit-color: rgba(0, 204, 20, 1);
 }
+
+@media (prefers-color-scheme: dark) {
+    :root.theme-dark {
+        --bg-color: rgba(0, 0, 0, 1);
+        --basic-color: rgba(0, 204, 20, 1);
+        --bold-weight: 785;
+        --basic-weight: 465;
+        --bg-image1: #000;
+        --bg-image2: #007f0c;
+        --bg-image3: #004306;
+        --circuit-color: rgba(0, 204, 20, 1);   
+    }
+  }

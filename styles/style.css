@@ -245,18 +245,12 @@ filter: hue-rotate(45deg);
 
 .like-icon:hover .core {
   fill: var(--basic-color);
+  transition: fill 0.3s;
 }
 
 .like-icon:hover .main-body {
   fill: var(--basic-color);
-}
-
-.like-icon:hover .main-body {
   transition: fill  0.3s 0.05s;
-}
-
-.like-icon:hover .core {
-  transition: fill 0.3s;
 }
 
 .card__icon-button:active .like-icon .main-body,
