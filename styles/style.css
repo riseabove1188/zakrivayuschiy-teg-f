@@ -17,9 +17,9 @@
 .page {
   font-family: var(--basic-font), sans-serif;
   background-image: 
-    repeating-linear-gradient(to right, var(--bg-image-one) 0px 2px,  transparent 2px 4px),
-    repeating-linear-gradient(to bottom, var(--bg-image-one) 0px 2px, transparent 2px 4px),
-    linear-gradient(var(--bg-image-two) 0.01%, var(--bg-image-three));
+    repeating-linear-gradient(to right, var(--bg-image-medium) 0px 2px,  transparent 2px 4px),
+    repeating-linear-gradient(to bottom, var(--bg-image-medium) 0px 2px, transparent 2px 4px),
+    linear-gradient(var(--bg-image-light) 0.01%, var(--bg-image-dark));
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -39,14 +39,14 @@
 }
 
 .header__logo {
-  font-size: 65px;
+  font-size:  calc(49px + 16 * (100vw - 375px) / 1065);
   margin-block-start: 136px; 
   font-weight: var(--constant-weight);
   text-transform: uppercase;
 }
 
 .header__title-name {
-  font-size: 23px;
+  font-size: calc(14px + 9 * (100vw - 375px) / 1065);
   font-weight: var(--constant-weight);
   text-transform: uppercase;
   margin-block-start: 20px;
@@ -152,31 +152,31 @@
   inline-size: 100%;
 }
 
-.card__image#image-two {
+.image-sepia {
   filter: sepia(60%);
 }
 
-.card__image#image-three {
+.image-saturate {
   filter: saturate(200%)
 }
 
-.card__image#image-four {
+.image-hue-rotate {
   filter: hue-rotate(45deg);
 }
 
-.card__image#image-five {
+.image-invert {
   filter: invert(0.7);
 }
 
-.card__image#image-six{
+.image-mix{
   filter: invert(1) brightness(200%) saturate(60%) hue-rotate(90deg);
 }
 
-.card__image#image-seven {
+.image-brightness {
   filter: brightness(200%);
 }
 
-.card__image#image-eight {
+.image-blur {
   filter: blur(2px);
 }
 
@@ -191,6 +191,14 @@
   opacity: 50%;
   z-index: 2;
 }
+
+@supports((text-stroke: 1px var(--bg-color)) or (-webkit-text-stroke: var(--bg-color))) {
+  .card__watermark {
+      -webkit-text-stroke: 1px var(--bg-color);
+      text-stroke: 1px var(--bg-color);
+      text-shadow: none;
+  }
+} 
 
 .card:first-child .card__watermark,
 .card:nth-child(2) .card__watermark {
@@ -314,6 +322,8 @@
 .dialog__text {
   font-family: var(--accent-font), fantasy;
   font-size: 14px;
+  text-transform: uppercase;
+  line-height: 21px;
 }
 
 .dialog {
@@ -332,13 +342,15 @@
 
 .dialog__pic {
   scale: 2;
+  align-self: center;
 }
 
 .dialog__button {
   inline-size: 100%;
+  text-transform: uppercase;
 }
 
-dialog::backdrop {
+.dialog[open]::backdrop {
   background-color: var(--basic-color);
   opacity: 75%;
 }
